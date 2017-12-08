@@ -1,0 +1,56 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(15deg, #fb7679 0%, #fb7679 49.99999%, #5a5ee5 50%, #5a5ee5 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5ee5', endColorstr='#fb7679', GradientType=1); /* ie6-9 */
+  .todolist {
+    max-width: 480px;
+    width: 100%;
+    .title {
+      display: flex;
+      background: #fbfaff;
+      position: relative;
+      padding: 15px 15px 15px 32px;
+      .date {
+        .day {
+          color: $primary;
+          font-size: 28px;
+          font-weight: 500;
+        }
+        .counter {
+          color: $secondary;
+          font-size: 14px;
+        }
+      }
+      .tasks {
+        margin-left: auto;
+        .add {
+          margin-left: 10px;
+          background-color: #fa6869;
+        }
+      }
+    }
+    .content {
+      position: relative;
+      .list {
+        padding-top: 0;
+        padding-bottom: 0;
+        .list-item {
+          border-left: 3px solid transparent;
+          &:hover {
+            border-left: 3px solid #3f51b5;
+          }
+          .isCompleted {
+            font-style: italic;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}
